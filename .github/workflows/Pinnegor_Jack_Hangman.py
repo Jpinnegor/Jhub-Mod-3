@@ -15,7 +15,7 @@ words = ['rarely','universe','notice','sugar','interference','constitution',
 'enough','surface','small','search'.lower()
 ]
 #title
-print("Welcome to Hangman! You have 7 chances to guess.")
+print("Welcome to Hangman! You have 7 lives to guess the answer.")
 
 #word generator
 hidden_word = random.sample(words,1)
