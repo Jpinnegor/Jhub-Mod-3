@@ -1,24 +1,15 @@
+#Jack Pinnegor Hangman Game
+
 import random
 
-#Word list
-words = ['rarely','universe','notice','sugar','interference','constitution',
-'we','minus','breath','clarify','take','recording','amendment','hut','tip''logical',
-'cast','title','brief','none','relative','recently','detail','port','such','complex',
-'bath','soul','holder','pleasant','buy','federal','lay','currenty','saint','for','simple',
-'deliberately','means','peace','prove','sexual','chief','department','bear','injection',
-'off','son','reflect','fast','ago','education','prison','birthday','variation',
-'exactly','expect','engine','difficulty','apply','hero','contemporary','that',
-'surprised','fear','convert','daily','yours','pace','shot','income','democracy',
-'albeit','genuinely','commit','caution','try','membership','elderly','enjoy',
-'pet','detective','powerful','argue','escape','timetable','proceeding','sector',
-'cattle','dissolve','suddenly','teach','spring','negotiation','solid','seek',
-'enough','surface','small','search'.lower()
-]
+with open("words_list.txt") as f:
+    word_list = f.read().splitlines()
+
 #title
-print("Welcome to Hangman! You have 7 lives to guess the answer.")
+print("Welcome to Hangman! You have 7 lives to guess.")
 
 #word generator
-hidden_word = random.sample(words,1)
+hidden_word = random.sample(word_list,1)
 
 if(hidden_word[0]):
     print("The length of the word is: " , len(hidden_word[0]))
